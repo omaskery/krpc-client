@@ -126,7 +126,7 @@ mod schema {
 
     macro_rules! rpc_enum {
         ($name:ident, [$($value:ident),+$(,)?]) => {
-            #[derive(Debug, Copy, Clone)]
+            #[derive(Debug, Copy, Clone, Eq, PartialEq)]
             pub enum $name {$(
                 $value,
             )+}
